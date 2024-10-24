@@ -23,13 +23,12 @@ setupSocket(server)
 
 app.use(express.json());
 
-const corsOptions = {
-    origin: 'http://localhost:5173', // Specify the allowed origin
-    methods: ['GET', 'POST','PATCH','DELETE'], // Specify the allowed methods (optional)
-    credentials: true, // Allow credentials (like cookies or authorization headers)
-};
-app.use(cors(corsOptions));
-// app.use(cors());
+// const corsOptions = {
+//     origin: 'http://localhost:5173', 
+//     methods: ['GET', 'POST','PATCH','DELETE'], 
+//     credentials: true, 
+// };
+app.use(cors());
 
 app.get('/',(req,res)=>{
     res.send('slack api')

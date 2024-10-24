@@ -4,7 +4,7 @@ const Chats = require('../models/chats')
 const setupSocket = (server)=>{
     const io = new Server(server, {
         cors: {
-            origin: 'http://localhost:5173', 
+            origin: 'https://slack-sandy.vercel.app', 
             methods: ['GET', 'POST'],
             credentials: true,
         },
