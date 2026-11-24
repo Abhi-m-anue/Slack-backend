@@ -48,7 +48,8 @@ const start = async()=>{
         })
     }
     catch(err){
-        console.log(err)
+        console.error('Failed to start server:', err)
+        process.exitCode = 1
     }
    
 }
